@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Work+Sans:wght@900&display=swap');
+
+:root{
+    --maxWidth:1300px;
+}
+
+#header-outer-container{
+    min-height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* border: 2px solid green; */
+    width: 100vw;
+    max-width: var(--maxWidth);
+    background-color: rgb(155, 153, 153);
+    margin: 0 auto;
+}
+
+#logo-container>a{
+    font-family: 'Work Sans', sans-serif;
+    font-size: large;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+@media only screen and (min-width:800px){
+    #header-outer-container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        max-width: var(--maxWidth);
+    }
+}

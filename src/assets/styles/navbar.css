@@ -1,0 +1,11 @@
+#outer-navigation-container{
+    background-color: red;
+}
+
+
+
+@media only screen and (max-width:800px){
+    #outer-navigation-container{
+        background-color: blue;
+    }
+}

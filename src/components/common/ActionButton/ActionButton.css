@@ -1,0 +1,13 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
+
+#action-btn{
+    width: 250px;
+    height: 50px;
+    background-color: green;
+}
+
+
+
+@media only screen and (min-width:800px){
+    
+}
