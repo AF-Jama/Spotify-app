@@ -10,9 +10,11 @@
     flex-direction: column;
     align-items: flex-start;
     /* border: 2px solid green; */
+    justify-content: flex-start;
     width: 100vw;
     max-width: var(--maxWidth);
-    background-color: rgb(155, 153, 153);
+    /* background-color: rgb(155, 153, 153); */
+    background-color: black;
     margin: 0 auto;
 }
 
@@ -20,7 +22,10 @@
     font-family: 'Work Sans', sans-serif;
     font-size: large;
     text-decoration: none;
-    color: black;
+    margin-left: 1rem;
+    position:relative;
+    top: -10px;
+    color: white;
 }
 
 

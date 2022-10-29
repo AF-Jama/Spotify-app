@@ -9,7 +9,7 @@ function Header(props){
     return (
         <header id='header-outer-container'>
             <div id="logo-container">
-                <a href="#">My Spotify Stats</a>
+                <a href="#" style={{color:"white"}}>My Spotify Stats</a>
             </div>
 
             <NavBar/>
