@@ -12,29 +12,6 @@ function NavBar(props){
     const [token,setToken] = useState(null);
     const outerContainerRef = React.useRef()
     const burgerRef = React.useRef()
-
-    // const {token,tokenExp} = useSpotify();
-
-     // useEffect runs on initial render
-    useEffect(()=>{
-        const hash = window.location.hash;
-        let accessToken;
-        if(!token){
-            console.log("Not present")
-            try{
-                accessToken = hash.split('#access_token=')[1].split('&token_type')[0];
-                console.log(`Token is ${accessToken}`)
-                setToken(accessToken)
-                localStorage.setItem('token',accessToken);
-            }catch(err){ // error block triggered, meaning split method hits error
-                console.log("Initial render split error")
-                return; 
-            }
-        }else{
-            console.log(token)
-            console.log("Present")
-        }
-    },[])
     
     function onClick(event){
         event.preventDefault()

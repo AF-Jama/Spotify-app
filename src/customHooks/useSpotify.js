@@ -1,10 +1,10 @@
 import React,{useState,useEffect} from "react";
 import {authScopesString,BASE_URL,CLIENT_ID,CLIENT_SECRET,AUTH_URL} from '../config/config.js';
-import loginContext from "../contexts/LoginContext/LoginContext";
+// import loginContext from "../contexts/LoginContext/LoginContext";
 
 const useSpotify = ()=>{
     const [token, setToken] = useState(null); // token state
-    const [tokenExp, setTokenExp] = useState("null"); // token expiry time state
+    const [tokenExp, setTokenExp] = useState(null); // token expiry time state
 
 
     // useEffect runs on initial render
