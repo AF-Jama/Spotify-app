@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+#profile-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* #avatar-and-name-container>h6{
+    margin-top: 1rem;
+} */
+
+#added-information-container{
+    display: none;
+}

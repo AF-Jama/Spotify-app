@@ -7,6 +7,7 @@ import StatsScreen from './components/StatsScreen';
 import ContactScreen from './components/ContactScreen';
 import AboutScreen from './components/AboutScreen';
 import AuthContextProvider from './contexts/AuthContext/AuthContextProvider';
+import Profile from './components/Profile';
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
 
 function App() {
