@@ -6,14 +6,39 @@
 
 #profile-container{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* #avatar-and-name-container>h6{
-    margin-top: 1rem;
-} */
+#avatar-and-name-container{
+    margin-right: 1rem  ;
+}
+
+#profile-container{
+    border: 2px solid green;
+}
+
+#avatar-and-name-container>h6{
+    color: white;
+}
 
 #added-information-container{
     display: none;
+    color: white;
+    padding: 1rem;
 }
+
+/* .information-link{
+    display: inline;
+    padding: 1rem;
+} */
+
+
+@media only screen and (min-width:800px){
+    #added-information-container{
+        display: block;
+    }
+}
+
+
+

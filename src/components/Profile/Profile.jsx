@@ -8,30 +8,30 @@ import { useEffect } from "react";
 
 
 const Profile = ()=>{
-    const {token,setToken} = useContext(authContext);
+    // const {token,setToken} = useContext(authContext);
     const {data,loading,error} = useFetch('https://api.spotify.com/v1/me'); // need to refactor fetch hook to involve url argument
-    console.log(`Token in profile component ${token}`);
+    // console.log(`Token in profile component ${token}`);
 
     console.log(`dATA IS ${data}`)
 
-    if(!token){
-        // triggered if token is present
-        return <Navigate replace to='/'/>
+    // if(!token){
+    //     // triggered if token is present
+    //     return <Navigate replace to='/'/>
 
-    }
+    // }
 
     if(data){
         return (
             <div id="profile-container">
                 <div id="avatar-and-name-container">
                     <Avatar/>
-                    <h6 style={{color:"white"}}>{data.display_name}</h6>
+                    <h6>{data.display_name}</h6>
                 </div>
 
                 <div id="added-information-container">
-                    <div id="country-code">{data.country}</div>
-                    <div id="user-type">{data.type}</div>
-                    <div id="user-email">{data.email}</div>
+                    <div id="country-code" className="information-link">Country: {data.country}</div>
+                    <div id="user-type" className="information-link">Type: {data.type}</div>
+                    <div id="user-email" className="information-link">Email: {data.email.substring(0,6)}...</div>
                 </div>
 
             </div>

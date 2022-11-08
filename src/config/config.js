@@ -5,7 +5,8 @@ let authScopes = [
     "playlist-read-collaborative",
     "user-follow-read",
     "user-read-playback-position",
-    "user-library-read"
+    "user-library-read",
+    "user-top-read"
 ]
 
 let authScopesString = authScopes.join(',')

@@ -8,7 +8,7 @@ const AuthContextProvider = ({children})=>{ // auth context provider that wraps 
 
 
     return (
-        <authContext.Provider value={{token,setToken}}> // provider takes in two arguments value, state and setToken
+        <authContext.Provider value={{token,setToken}}> 
             {children}
         </authContext.Provider>
     )

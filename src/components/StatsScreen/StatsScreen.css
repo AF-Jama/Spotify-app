@@ -4,8 +4,42 @@
     box-sizing: border-box;
 }
 
+:root{
+    --maxWidth:1500px;
+}
+
+#stats-screen-outer-container{
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
 #stats-outer-container{
+    /* display: grid; */
+    position: relative;
+    grid-template-columns: 1fr;
+    border: 2px solid purple;
+    margin-top: 1rem;
+}
+
+#spotify-api-container{
+    min-height: 50vh;
+    height: auto;
+    border: 2px solid red;
     display: grid;
     grid-template-columns: 1fr;
-    border: 2px solid red;
+    grid-template-rows: auto 1fr;
+}
+
+
+@media only screen and (min-width:800px){
+    #stats-outer-container{
+        width: 95vw;
+        max-width: var(--maxWidth);
+        margin: 1rem auto;
+    }
+
+    #spotify-api-container{
+        display: grid;
+        grid-template-columns: 200px 1fr;
+    }
 }

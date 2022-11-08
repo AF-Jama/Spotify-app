@@ -7,7 +7,7 @@ const useFetch = (URL)=>{
     const [data,setData] = useState(null);
     const [loading,setLoading] = useState(false);
     const [error,setError] = useState(null);
-    const {token,setToken} = useContext(authContext)
+    const {token,setToken} = useContext(authContext);
 
     // useEffect runs on initial render(mount) and if URL or token changes 
     useEffect(()=>{
