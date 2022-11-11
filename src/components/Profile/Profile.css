@@ -5,6 +5,8 @@
 }
 
 #profile-container{
+    width: 90vw;
+    max-width: 1300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +17,7 @@
 }
 
 #profile-container{
-    border: 2px solid green;
+    /* border: 2px solid green; */
 }
 
 #avatar-and-name-container>h6{

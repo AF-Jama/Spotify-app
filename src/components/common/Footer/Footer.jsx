@@ -26,4 +26,4 @@ function Footer(props){ // component takes no props nor has state
     )
 }
 
-export default Footer
+export default Footer;

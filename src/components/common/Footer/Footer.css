@@ -6,10 +6,10 @@
 
 Footer{
     width: 100%;
-    max-width: var(--maxWidth);
+    /* max-width: var(--maxWidth); */
     margin: 0 auto;
-    display: flex;
-    position:fixed;
+    display: none;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -17,7 +17,7 @@ Footer{
     margin-top: auto;
     flex-direction: column;
     align-items: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 #logo-container>a{
@@ -51,8 +51,8 @@ Footer{
     }
 }
 
-@media only screen and (max-width:800px){
-    footer{
+@media only screen and (min-width:800px){
+    Footer{
         display: flex;
         flex-direction: row;
     }

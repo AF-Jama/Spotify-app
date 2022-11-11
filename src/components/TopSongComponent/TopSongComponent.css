@@ -15,7 +15,7 @@
     #top-song-container{
         grid-row-start: 1;
         grid-row-end: 3;
-        grid-gap: 1rem;
+        grid-gap:1rem;
         grid-template-columns: repeat(2,1fr);
     }
 }

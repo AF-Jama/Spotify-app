@@ -3,3 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --maxWidth:10px;
+}
+
+#textInputContainer{
+    display: block;
+    width: 85%;
+    height: 30px;
+    margin: 0.5rem auto;
+    max-width: var(--maxWidth);
+    border:2px solid green;
+}

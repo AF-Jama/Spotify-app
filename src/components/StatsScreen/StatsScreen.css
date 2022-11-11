@@ -17,14 +17,14 @@
     /* display: grid; */
     position: relative;
     grid-template-columns: 1fr;
-    border: 2px solid purple;
+    /* border: 2px solid #1DB954; */
     margin-top: 1rem;
 }
 
 #spotify-api-container{
     min-height: 50vh;
     height: auto;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
@@ -41,5 +41,10 @@
     #spotify-api-container{
         display: grid;
         grid-template-columns: 200px 1fr;
+    }
+
+    #artist-search-outer-container{
+        grid-row-start: 1;
+        grid-row-end: 3;
     }
 }

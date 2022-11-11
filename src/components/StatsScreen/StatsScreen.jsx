@@ -1,10 +1,13 @@
 import React, { Component, useState,useContext } from 'react';
 import authContext from '../../contexts/AuthContext/AuthContext';
 import Header from '../common/Header';
+import Footer from '../common/Footer';
 import Avatar from '../Avatar';
 import Profile from '../Profile';
 import SideBar from '../SideBarComponent';
 import TopSongComponent from '../TopSongComponent';
+import SearchComponent from '../common/SearchComponent';
+import ArtistInformation from '../ArtistInformationComponent';
 import useFetch from '../../customHooks/useFetch';
 import useLoggedIn from '../../customHooks/useLoggedIn';
 import './StatsScreen.css'
@@ -28,6 +31,12 @@ function StatsScreen(props){
                 return <TopSongComponent/>
 
             case 2:
+                return(
+                    <div id="artist-search-outer-container">
+                        <SearchComponent onChange={onChange}/>
+                        <ArtistInformation query={query}/>
+                    </div>
+                )
                 return <h1>SUCCESFUL 1</h1>
 
             case 3:
@@ -54,6 +63,12 @@ function StatsScreen(props){
         setContainerNumber(3);
     }
 
+    function onChange(event){
+        event.preventDefault()
+
+        setQuery(event.target.value); // onChange method triggers setQuery which triggers re render
+    }
+
 
 
     return (
@@ -66,6 +81,7 @@ function StatsScreen(props){
                     {renderSwitch(containerNumber)}
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }
