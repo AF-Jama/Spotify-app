@@ -22,8 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-#enviroment
-./src/env
+./src/.env
 
-#config
+
 ./src/config

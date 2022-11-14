@@ -47,4 +47,12 @@
         grid-row-start: 1;
         grid-row-end: 3;
     }
+
+    #playback-state-outer-container{
+        grid-row-start: 1;
+        grid-row-end: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

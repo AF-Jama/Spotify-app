@@ -8,6 +8,7 @@ import SideBar from '../SideBarComponent';
 import TopSongComponent from '../TopSongComponent';
 import SearchComponent from '../common/SearchComponent';
 import ArtistInformation from '../ArtistInformationComponent';
+import PlaybackCard from '../PlaybackCard';
 import useFetch from '../../customHooks/useFetch';
 import useLoggedIn from '../../customHooks/useLoggedIn';
 import './StatsScreen.css'
@@ -40,7 +41,11 @@ function StatsScreen(props){
                 return <h1>SUCCESFUL 1</h1>
 
             case 3:
-                return <h2>SUCCESFUL 2</h2>
+                return (
+                    <div id="playback-state-outer-container" style={{border:"2px solid red"}}>
+                        <PlaybackCard/>
+                    </div>
+                )
 
         }
     }

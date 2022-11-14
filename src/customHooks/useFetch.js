@@ -27,6 +27,9 @@ const useFetch = (URL)=>{
                 console.log(2)
     
                 response = await response.json();
+                if(!response){
+                    console.log("HELLO")
+                }
 
                 console.log(3)
 
@@ -35,7 +38,7 @@ const useFetch = (URL)=>{
                 setLoading(false);
                 setError(null);
             }catch(error){
-                console.log(error)
+                // console.log(error) 
                 setData(null);
                 setError(error)
                 setLoading(true)

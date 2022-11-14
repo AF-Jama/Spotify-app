@@ -13,7 +13,7 @@ const Avatar = ()=>{
 
     if (data){
         // triggered if data is loaded
-        return <img src={GenericProfilePhoto} alt="" id="avatar-logo" />
+        return <img src={data.images[0].url} alt="" id="avatar-logo" />
     }
 }
 
