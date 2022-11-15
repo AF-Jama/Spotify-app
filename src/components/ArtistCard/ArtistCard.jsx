@@ -2,7 +2,7 @@ import React,{useState,useEffect,useContext} from "react";
 import './ArtistCard.css';
 
 
-const ArtistCard = (props)=>{
+const  ArtistCard = (props)=>{
 
     function convertNumberToTruncatedVersion (labelValue) {
 
@@ -23,19 +23,26 @@ const ArtistCard = (props)=>{
 
 }
     function capitalizeFirstLetter(string) {
+        // first letter of string is converted toUpperCase, if error is triggered then catch block is triggered and null is returned  
+        try{
+            string[0].toUpperCase()
+            return string?string:null;
+        }catch(error){
+            return null;
+        }
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
   
 
     return (
         <div id="artist-card">
-            <h4>{props.data.artists.items[0].name}</h4>
-            <a id="artist-image-container" href={props.data.artists.items[0].external_urls.spotify}>
-                <img src={props.data.artists.items[0].images[1].url} alt=""/>
+            <h4>{props.data.artists.items[0].name||null}</h4>
+            <a id="artist-image-container" href={props.data.artists.items[0].external_urls.spotify||null}>
+                <img src={props.data.artists.items[0].images[1].url||null} alt=""/>
             </a>
             <div id="artist-stats">
-                <span id="followers-span">Followers:{convertNumberToTruncatedVersion(props.data.artists.items[0].followers.total)}</span>
-                <span id="genre-span">Genre:{capitalizeFirstLetter(props.data.artists.items[0].genres[1])}</span>
+                <span id="followers-span">Followers:{convertNumberToTruncatedVersion(props.data.artists.items[0].followers.total)||null}</span>
+                <span id="genre-span">Genre:{capitalizeFirstLetter(props.data.artists.items[0].genres[1])||null}</span>
             </div>
         </div>
     )

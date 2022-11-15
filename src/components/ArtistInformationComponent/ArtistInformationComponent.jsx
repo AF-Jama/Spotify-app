@@ -20,6 +20,7 @@ const ArtistInformation = (props)=>{
     }
 
     if(error||loading){
+        console.log("Error")
         return (
             <div id="artist-information-container">
                 <div id="error-loading-container">
@@ -30,6 +31,7 @@ const ArtistInformation = (props)=>{
     }
 
     if(data){
+        console.log("HERE")
         console.log(data)
         return (
             <div id="artist-information-container">
